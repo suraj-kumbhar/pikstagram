@@ -1,10 +1,10 @@
-export default{
+export default {
     name: 'postedBy',
     title: 'PostedBy',
     type: 'reference',
     to: [
         {
-            type: 'user'
-        }
-    ]
-}
+            type: 'user',
+        },
+    ],
+};

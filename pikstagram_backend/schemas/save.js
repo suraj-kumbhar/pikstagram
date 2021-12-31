@@ -1,4 +1,4 @@
-export default{
+export default {
     name: 'save',
     title: 'Save',
     type: 'document',
@@ -6,12 +6,12 @@ export default{
         {
             name: 'postedBy',
             title: 'PostedBy',
-            type: 'postedBy'
+            type: 'postedBy',
         },
         {
             name: 'userId',
             title: 'UserId',
-            type: 'string'
+            type: 'string',
         },
-    ]
-}
+    ],
+};
