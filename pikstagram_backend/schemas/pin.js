@@ -6,52 +6,52 @@ export default {
         {
             name: 'title',
             title: 'Title',
-            type: 'string'
+            type: 'string',
         },
         {
             name: 'about',
             title: 'About',
-            type: 'string'
+            type: 'string',
         },
         {
             name: 'destination',
             title: 'Destination',
-            type: 'url'
+            type: 'url',
         },
         {
             name: 'category',
             title: 'Category',
-            type: 'string'
+            type: 'string',
         },
         {
             name: 'image',
             title: 'Image',
             type: 'image',
             option: {
-                hotspot: true
-            }
+                hotspot: true,
+            },
         },
         {
             name: 'userId',
             title: 'userId',
-            type: 'string'
+            type: 'string',
         },
         {
             name: 'postedBy',
             title: 'PostedBy',
-            type: 'postedBy'
+            type: 'postedBy',
         },
         {
             name: 'save',
             title: 'Save',
             type: 'array',
-            of: [{type: 'save'}]
+            of: [{ type: 'save' }],
         },
         {
             name: 'comments',
             title: 'Comments',
             type: 'array',
-            of: [{ type: 'comment'}]
+            of: [{ type: 'comment' }],
         },
-    ]
-}
+    ],
+};

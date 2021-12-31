@@ -1,17 +1,17 @@
-export default{
+export default {
     name: 'comment',
     title: 'Comment',
     type: 'document',
-    fields:[
+    fields: [
         {
             name: 'postedBy',
             title: 'PostedBy',
-            type: 'postedBy'
+            type: 'postedBy',
         },
         {
             name: 'comment',
             title: 'Comment',
-            type: 'string'
+            type: 'string',
         },
-    ]
-}
+    ],
+};
