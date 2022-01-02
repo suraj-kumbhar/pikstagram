@@ -138,12 +138,9 @@ const PinDetail = ({ user }) => {
                         ))}
                     </div>
                     <div className='flex flex-wrap mt-6 gap-3 items-center'>
-                        <Link
-                            to={`user-profile/${pinDetail.postedBy?._id}`}
-                            className=''
-                        >
+                        <Link to={`/user-profile/${user?._id}`} className=''>
                             <img
-                                src={pinDetail.postedBy?.image}
+                                src={user?.image}
                                 alt='user-profile'
                                 className='w-8 h-8 rounded-full cursor-pointer'
                             />
@@ -166,15 +163,13 @@ const PinDetail = ({ user }) => {
                 </div>
             </div>
             {console.log(pins)}
-            {pins?.length > 0 ? (
+            {pins?.length > 0 && (
                 <>
                     <h2 className='text-center font-bold text-2xl mt-8 mb-4'>
                         More like this
                     </h2>
                     <MasonryLayout pins={pins} />
                 </>
-            ) : (
-                <Spinner message='Loading more pins..' />
             )}
         </>
     );
