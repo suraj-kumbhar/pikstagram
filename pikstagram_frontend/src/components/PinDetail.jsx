@@ -170,7 +170,6 @@ const PinDetail = ({ user }) => {
                     </div>
                 </div>
             </div>
-            {console.log(pins)}
             {pins?.length > 0 && (
                 <>
                     <h2 className='text-center font-bold text-2xl mt-8 mb-4'>

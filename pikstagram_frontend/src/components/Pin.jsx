@@ -14,10 +14,9 @@ const Pin = ({ pin: { postedBy, image, _id, destination, save } }) => {
     const navigate = useNavigate();
 
     const user = fetchUser();
-    console.log(user);
 
     const alreadySaved = save?.filter(
-        (item) => item.postedBy._id === user.googleId
+        (item) => item.postedBy._id === user?.googleId
     ).length
         ? true
         : false;
@@ -30,10 +29,10 @@ const Pin = ({ pin: { postedBy, image, _id, destination, save } }) => {
                 .insert('after', 'save[-1]', [
                     {
                         _key: uuidv4(),
-                        userId: user.googleId,
+                        userId: user?.googleId,
                         postedBy: {
                             _type: 'postedBy',
-                            _ref: user.googleId,
+                            _ref: user?.googleId,
                         },
                     },
                 ])
@@ -114,7 +113,7 @@ const Pin = ({ pin: { postedBy, image, _id, destination, save } }) => {
                                         : destination}
                                 </a>
                             )}
-                            {postedBy?._id === user.googleId && (
+                            {postedBy?._id === user?.googleId && (
                                 <button
                                     type='button'
                                     className='bg-white p-2 opacity-70 hover:opacity-100 font-bold text-dark text-base rounded-3xl hover:shadow-md outline-none'

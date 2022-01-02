@@ -17,7 +17,6 @@ const Feed = () => {
             const query = searchQuery(categoryId);
 
             client.fetch(query).then((data) => {
-                console.log(data);
                 setPins(data);
                 setLoading(false);
             });
